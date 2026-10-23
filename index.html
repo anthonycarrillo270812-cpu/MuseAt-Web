@@ -1,0 +1,531 @@
+
+    <!doctype html>
+    <html lang="es" data-theme="dark">
+
+    <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+
+    <!-- Permite adaptar la web a móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Descripción de la página -->
+    <meta name="description"
+            content="MuseAt: comunidad musical independiente.">
+
+    <title>MuseAt | Tu ruido, nuestra escena</title>
+
+    <!-- Nuestra hoja de estilos.
+        Bootstrap se importará desde style.css. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos de Bootstrap para botones y controles -->
+    <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Tipografías para darle personalidad grunge -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+    <!-- =========================================
+        CABECERA PRINCIPAL
+        Logo, buscador y menú hamburguesa
+    ========================================== -->
+    <header class="site-header">
+
+        <nav class="navbar container-fluid px-3 px-lg-5">
+
+        <!-- Logo de MuseAt -->
+        <a class="navbar-brand brand-logo" href="#inicio">
+            MUSE<span>AT</span><small>YOUR NOISE. YOUR SCENE.</small>
+        </a>
+
+        <!-- Buscador de canciones -->
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+
+            <input type="search"
+                id="searchInput"
+                class="form-control"
+                placeholder="Busca artistas, canciones..."
+                aria-label="Buscar canciones">
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="sideMenu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================================
+        FONDO OSCURO DEL MENÚ
+        Se muestra cuando el menú está abierto
+    ========================================== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- =========================================
+        MENÚ LATERAL DESPLEGABLE
+    ========================================== -->
+    <aside class="side-menu" id="sideMenu"
+            aria-label="Menú de navegación">
+
+        <div class="menu-heading">
+        <span>ARCHIVO #001</span>
+
+        <button id="closeMenu"
+                class="icon-button"
+                aria-label="Cerrar menú">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        </div>
+
+        <!-- Identidad del usuario local -->
+        <div class="menu-profile">
+        <div class="profile-avatar">M</div>
+
+        <div>
+            <strong id="menuUsername">Músico anónimo</strong>
+            <small>MIEMBRO DE MUSEAT</small>
+        </div>
+        </div>
+
+        <p class="menu-label">TU ESPACIO</p>
+
+        <a href="#perfil" class="menu-link" data-section="perfil">
+        <i class="bi bi-person"></i> Mi perfil
+        </a>
+
+        <a href="#mis-canciones"
+        class="menu-link" data-section="mis-canciones">
+        <i class="bi bi-music-note-list"></i> Mis canciones
+        </a>
+
+        <a href="#subir" class="menu-link" data-section="subir">
+        <i class="bi bi-cloud-arrow-up"></i> Subir tema
+        </a>
+
+        <p class="menu-label">PREFERENCIAS</p>
+
+        <!-- Alternador de tema claro/oscuro -->
+        <button id="themeToggle" class="menu-link theme-button">
+        <i class="bi bi-sun"></i>
+        <span id="themeLabel">Cambiar a tema claro</span>
+        </button>
+
+        <div class="menu-footer">
+        <p>NO INDUSTRY. JUST MUSIC.</p>
+        <small>© 2026 MUSEAT</small>
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================
+        CONTENIDO PRINCIPAL
+    ========================================== -->
+    <main class="container-fluid px-3 px-lg-5" id="inicio">
+
+        <!-- HERO / PORTADA -->
+        <section class="hero-section">
+
+        <div class="hero-copy">
+            <span class="eyebrow">
+            <span class="status-dot"></span>
+            INDEPENDIENTE POR NATURALEZA
+            </span>
+
+            <h1>
+            TU RUIDO.<br>
+            <span>TU ESCENA.</span>
+            </h1>
+
+            <p>
+            Sin algoritmos que decidan por ti.
+            Sin pedir permiso. Solo música hecha por personas.
+            </p>
+
+            <div class="hero-actions">
+            <a href="#explorar" class="btn btn-danger hero-button">
+                EXPLORAR MÚSICA <i class="bi bi-arrow-down-right"></i>
+            </a>
+
+            <a href="#subir" class="btn btn-outline-light hero-button">
+                SUBE TU TEMA <i class="bi bi-plus-lg"></i>
+            </a>
+            </div>
+        </div>
+
+        <!-- Elemento decorativo de la portada -->
+        <div class="hero-stamp" aria-hidden="true">
+            <span>KEEP</span>
+            <strong>MUSIC</strong>
+            <span>WEIRD</span>
+            <small>EST. 2026</small>
+        </div>
+
+        <div class="hero-bottom">
+            <span>SONIDO SIN FILTROS</span>
+            <span>/// MADRID · UNDERGROUND · ONLINE</span>
+        </div>
+
+        </section>
+
+
+        <!-- =========================================
+            GÉNEROS MUSICALES
+        ========================================== -->
+        <section class="section-block" id="explorar">
+
+        <div class="section-heading">
+            <div>
+            <span class="eyebrow">ENCUENTRA TU RUIDO</span>
+            <h2>EXPLORA POR <span>GÉNERO.</span></h2>
+            </div>
+
+            <span class="section-number">01 / GENRES</span>
+        </div>
+
+        <!-- Los botones se gestionan con JavaScript -->
+        <div class="genre-list" id="genreFilters">
+
+            <button class="genre-chip active" data-genre="Todos">
+            TODOS
+            </button>
+
+            <button class="genre-chip" data-genre="Rock">
+            ROCK
+            </button>
+
+            <button class="genre-chip" data-genre="Metal">
+            METAL
+            </button>
+
+            <button class="genre-chip" data-genre="Grunge">
+            GRUNGE
+            </button>
+
+            <button class="genre-chip" data-genre="Punk">
+            PUNK
+            </button>
+
+            <button class="genre-chip" data-genre="Indie">
+            INDIE
+            </button>
+
+            <button class="genre-chip" data-genre="Electrónica">
+            ELECTRÓNICA
+            </button>
+
+        </div>
+
+        </section>
+
+
+        <!-- =========================================
+            CATÁLOGO MUSICAL
+        ========================================== -->
+        <section class="section-block" id="catalogo">
+
+        <div class="section-heading">
+            <div>
+            <span class="eyebrow">HECHO POR LA COMUNIDAD</span>
+            <h2>EL RUIDO <span>RECIENTE.</span></h2>
+            </div>
+
+            <span class="section-number" id="songCount">
+            00 / TRACKS
+            </span>
+        </div>
+
+        <!-- Las tarjetas se crean desde JavaScript -->
+        <div class="row g-4" id="songGrid"></div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <p id="emptyMessage" class="empty-message" hidden>
+            No encontramos nada. Este silencio sí que es experimental.
+        </p>
+
+        </section>
+
+
+        <!-- =========================================
+            REPRODUCTOR MUSICAL FIJO
+        ========================================== -->
+        <section class="music-player" aria-label="Reproductor musical">
+
+        <div class="player-track">
+            <div class="player-art">
+            <i class="bi bi-disc"></i>
+            </div>
+
+            <div class="player-info">
+            <strong id="playerTitle">Ningún tema seleccionado</strong>
+            <span id="playerArtist">El silencio también cuenta</span>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="playPauseButton"
+                    class="player-play"
+                    aria-label="Reproducir o pausar">
+            <i class="bi bi-play-fill"></i>
+            </button>
+
+            <div class="player-progress">
+            <span id="currentTime">0:00</span>
+
+            <input type="range"
+                    id="progressBar"
+                    min="0"
+                    max="100"
+                    value="0"
+                    aria-label="Posición de reproducción">
+
+            <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <span class="player-tag">MUSEAT PLAYER</span>
+
+        <!-- Elemento de audio nativo controlado por JS -->
+        <audio id="audioPlayer" preload="metadata"></audio>
+
+        </section>
+
+
+        <!-- =========================================
+            PERFIL LOCAL
+        ========================================== -->
+        <section class="section-block content-panel" id="perfil">
+
+        <div class="section-heading">
+            <div>
+            <span class="eyebrow">TU IDENTIDAD</span>
+            <h2>MI <span>PERFIL.</span></h2>
+            </div>
+
+            <span class="section-number">02 / PROFILE</span>
+        </div>
+
+        <form id="profileForm" class="profile-form">
+
+            <div class="mb-3">
+            <label for="username" class="form-label">
+                Nombre artístico
+            </label>
+
+            <input type="text"
+                    id="username"
+                    class="form-control"
+                    maxlength="40"
+                    placeholder="Ej. Broken Amplifier"
+                    required>
+            </div>
+
+            <div class="mb-3">
+            <label for="bioInput" class="form-label">
+                Biografía
+            </label>
+
+            <textarea id="bioInput"
+                        class="form-control"
+                        rows="3"
+                        maxlength="300"
+                        placeholder="Cuéntale algo al mundo..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-danger">
+            GUARDAR PERFIL
+            </button>
+
+        </form>
+
+        <p id="profileMessage" class="form-message" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- =========================================
+            MIS CANCIONES
+        ========================================== -->
+        <section class="section-block content-panel" id="mis-canciones">
+
+        <div class="section-heading">
+            <div>
+            <span class="eyebrow">TU COLECCIÓN</span>
+            <h2>MIS <span>CANCIONES.</span></h2>
+            </div>
+
+            <span class="section-number">03 / LIBRARY</span>
+        </div>
+
+        <p class="section-description">
+            Aquí aparecen los temas que has añadido desde este navegador.
+        </p>
+
+        <div class="row g-4" id="mySongGrid"></div>
+
+        <p id="mySongsEmpty" class="empty-message">
+            Todavía no hay temas tuyos. Dale caña.
+        </p>
+
+        </section>
+
+
+        <!-- =========================================
+            SUBIR CANCIONES
+        ========================================== -->
+        <section class="section-block content-panel" id="subir">
+
+        <div class="section-heading">
+            <div>
+            <span class="eyebrow">HAZTE ESCUCHAR</span>
+            <h2>SUBE TU <span>TEMA.</span></h2>
+            </div>
+
+            <span class="section-number">04 / UPLOAD</span>
+        </div>
+
+        <p class="section-description">
+            Añade una canción desde tu ordenador a tu biblioteca local.
+        </p>
+
+        <form id="uploadForm">
+
+            <!-- Selector de archivo de audio -->
+            <label for="audioFile" class="upload-dropzone">
+            <i class="bi bi-cloud-arrow-up"></i>
+
+            <strong>SUELTA EL AUDIO AQUÍ</strong>
+            <span>O pulsa para seleccionar un archivo</span>
+
+            <small>MP3, WAV, OGG o FLAC, según compatibilidad del navegador</small>
+            </label>
+
+            <input type="file"
+                id="audioFile"
+                class="visually-hidden"
+                accept="audio/*"
+                required>
+
+            <p id="selectedFile" class="form-message">
+            Ningún archivo seleccionado.
+            </p>
+
+            <div class="row g-3">
+
+            <div class="col-md-6">
+                <label for="songTitle" class="form-label">
+                Nombre de la canción
+                </label>
+
+                <input type="text"
+                    id="songTitle"
+                    class="form-control"
+                    maxlength="100"
+                    placeholder="Ej. Noise in My Head"
+                    required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="songArtist" class="form-label">
+                Artista o banda
+                </label>
+
+                <input type="text"
+                    id="songArtist"
+                    class="form-control"
+                    maxlength="100"
+                    placeholder="Tu nombre artístico"
+                    required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="songGenre" class="form-label">
+                Género musical
+                </label>
+
+                <select id="songGenre" class="form-select" required>
+                <option value="Rock">Rock</option>
+                <option value="Metal">Metal</option>
+                <option value="Grunge">Grunge</option>
+                <option value="Punk">Punk</option>
+                <option value="Indie">Indie</option>
+                <option value="Electrónica">Electrónica</option>
+                <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="songCover" class="form-label">
+                Portada (opcional)
+                </label>
+
+                <input type="file"
+                    id="songCover"
+                    class="form-control"
+                    accept="image/*">
+            </div>
+
+            </div>
+
+            <button type="submit"
+                    class="btn btn-danger mt-4"
+                    id="uploadButton">
+            <i class="bi bi-plus-circle"></i>
+            AÑADIR A MUSEAT
+            </button>
+
+        </form>
+
+        <p id="uploadMessage" class="form-message" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- =========================================
+            PIE DE PÁGINA
+        ========================================== -->
+        <footer class="site-footer">
+
+        <a class="brand-logo" href="#inicio">
+            MUSE<span>AT</span>
+        </a>
+
+        <p>LA MÚSICA NO NECESITA PERMISO.</p>
+
+        <a href="#inicio" class="back-top">
+            VOLVER ARRIBA ↑
+        </a>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================
+        JAVASCRIPT
+        Se carga al final para que exista el HTML
+    ========================================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
